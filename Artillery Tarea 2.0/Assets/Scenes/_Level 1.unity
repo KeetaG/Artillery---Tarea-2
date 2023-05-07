@@ -478,6 +478,10 @@ PrefabInstance:
       objectReference: {fileID: 5216224489607452216, guid: ba1fc348ab8effa49bd8be485ceb41b1,
         type: 3}
     - target: {fileID: 1697839979, guid: 3d897fb24f9cba54d9309446a841e501, type: 3}
+      propertyPath: clipDisparo
+      value: 
+      objectReference: {fileID: 8300000, guid: 8729c68d8c9e9304b80d9b2ce0532314, type: 3}
+    - target: {fileID: 1697839979, guid: 3d897fb24f9cba54d9309446a841e501, type: 3}
       propertyPath: ParticulasDisparo
       value: 
       objectReference: {fileID: 902047057079321841, guid: cdea42a463bec854cbac07557545c0f7,
