@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject particulasExplosion;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Suelo")
+        {
+            Invoke("Explotar", 3);
+        }
+        if (collision.gameObject.tag == "Obstaculo" || collision.gameObject.tag == "Enemigo") Explotar();
+    }
+    public void Explotar() 
+    {
+        GameObject particulas = Instantiate(particulasExplosion, transform.position, Quaternion.identity) as GameObject;
+        Canon.bloqueado = false;
+        SeguirCamara.objetivo = null;
+        Destroy(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

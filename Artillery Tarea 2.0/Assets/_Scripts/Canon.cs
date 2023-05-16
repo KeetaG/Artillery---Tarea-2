@@ -58,8 +58,7 @@ public class Canon : MonoBehaviour
 
     private void Disparar(InputAction.CallbackContext context)
     {
-        if (disparos > 0)
-        {
+        
             GameObject temp = Instantiate(BalaPrefab, puntaCanon.transform.position, transform.rotation);
             Rigidbody tempRB = temp.GetComponent<Rigidbody>();
             SeguirCamara.objetivo = temp;
@@ -68,9 +67,9 @@ public class Canon : MonoBehaviour
             Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
             GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas));
             tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBola;
+            AdministradorJuego.DisparosPorJuego--;
             SourceDisparo.Play();
             bloqueado = true;
-        }
-        disparos--;
+        
     }
 }

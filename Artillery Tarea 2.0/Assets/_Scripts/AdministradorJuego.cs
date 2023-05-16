@@ -6,9 +6,11 @@ public class AdministradorJuego : MonoBehaviour
 {
     public static AdministradorJuego SingletonAdministradorJuego;
     public static int VelocidadBola = 30;
-    public static int DisparosPorJuego = 10;
+    public static int DisparosPorJuego = 3;
     public static float VelocidadRotacion = 1;
 
+    public GameObject canvasGanar;
+    public GameObject canvasPerder;
     private void Awake()
     {
         if (SingletonAdministradorJuego == null)
@@ -21,5 +23,22 @@ public class AdministradorJuego : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(DisparosPorJuego < 0)
+        {
+            PerderJuego();
+        }
+    }
+
+    public void GanarJuego()
+    {
+        canvasGanar.SetActive(true);
+    }
+
+    public void PerderJuego()
+    {
+        canvasPerder.SetActive(true);
+    }
 
 }
