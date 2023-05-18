@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class AdministradorJuego : MonoBehaviour
     public static int VelocidadBola = 30;
     public static int DisparosPorJuego = 3;
     public static float VelocidadRotacion = 1;
-
     public GameObject canvasGanar;
     public GameObject canvasPerder;
     private void Awake()
@@ -22,7 +22,6 @@ public class AdministradorJuego : MonoBehaviour
            Debug.LogError("Ya existe una instancia en esta clase");
         }
     }
-
     private void Update()
     {
         if(DisparosPorJuego < 0)
