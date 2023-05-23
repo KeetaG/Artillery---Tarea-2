@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class Canon : MonoBehaviour
 {
     public static bool bloqueado;
@@ -13,11 +14,12 @@ public class Canon : MonoBehaviour
     private GameObject puntaCanon;
     private float rotacion;
     private int disparos;
-
+    public SliderPotencia sliderPotencia;
     public CanonControls canonControls;
     private InputAction apuntar;
     private InputAction potencia;
     private InputAction disparar;
+    
 
     private void Awake()
     {
@@ -33,13 +35,14 @@ public class Canon : MonoBehaviour
         potencia.Enable();
         disparar.Enable();
         disparar.performed += Disparar;
+        potencia.performed += Potencia;
     }
     private void Start()
     {
         disparos = AdministradorJuego.DisparosPorJuego;
         puntaCanon = transform.Find("PuntaCanon").gameObject;
         SonidoDisparo = GameObject.Find("SonidoDisparo");
-        SourceDisparo = SonidoDisparo.GetComponent<AudioSource>();
+        SourceDisparo = SonidoDisparo.GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
@@ -71,5 +74,11 @@ public class Canon : MonoBehaviour
             SourceDisparo.Play();
             bloqueado = true;
         
+    }
+
+    public void Potencia(InputAction.CallbackContext contexto)
+    {
+        AdministradorJuego.VelocidadBola = sliderPotencia.sliderPotencia.value;
+
     }
 }

@@ -1137,6 +1137,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291132196}
   m_CullTransparentMesh: 1
+--- !u!114 &419562662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1697839979, guid: 3d897fb24f9cba54d9309446a841e501,
+    type: 3}
+  m_PrefabInstance: {fileID: 1697839977}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7209f5b6ff0787241b1c42351eef97e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467754498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035658514}
   - component: {fileID: 1035658515}
+  - component: {fileID: 1035658516}
   m_Layer: 5
   m_Name: Fuerza
   m_TagString: Untagged
@@ -1675,7 +1688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -167, y: -77}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035658515
@@ -1729,6 +1742,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1035658516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035658513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1e9e413ff98ec4a9bd7fa61659dd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canon: {fileID: 419562662}
+  sliderPotencia: {fileID: 1035658515}
 --- !u!1 &1039299960
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public partial class @CanonControls : IInputActionCollection2, IDisposable
                     ""id"": ""394135ee-c9fa-4568-9a8d-e7bb3c6a1466"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -165,9 +165,9 @@ public partial class @CanonControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
+                    ""name"": ""Negative"",
                     ""id"": ""d32c1793-dc91-4020-b724-536aa4e69473"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic"",
@@ -176,9 +176,9 @@ public partial class @CanonControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
+                    ""name"": ""Positive"",
                     ""id"": ""62285ca2-4d03-42d8-acc3-c20388bdae2f"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Generic"",

@@ -6,7 +6,7 @@ using UnityEngine;
 public class AdministradorJuego : MonoBehaviour
 {
     public static AdministradorJuego SingletonAdministradorJuego;
-    public static int VelocidadBola = 30;
+    public static float VelocidadBola = 1f;
     public static int DisparosPorJuego = 3;
     public static float VelocidadRotacion = 1;
     public GameObject canvasGanar;
@@ -38,6 +38,11 @@ public class AdministradorJuego : MonoBehaviour
     public void PerderJuego()
     {
         canvasPerder.SetActive(true);
+    }
+
+    public void CambiarVelocidad(float nuevaVelocidad)
+    {
+        VelocidadBola = nuevaVelocidad;
     }
 
 }
