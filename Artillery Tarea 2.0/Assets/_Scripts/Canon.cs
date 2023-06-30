@@ -76,9 +76,8 @@ public class Canon : MonoBehaviour
         
     }
 
-    public void Potencia(InputAction.CallbackContext contexto)
-    {
-        AdministradorJuego.VelocidadBola = sliderPotencia.sliderPotencia.value;
-
-    }
+   private void Potencia(InputAction.CallbackContext context)
+   {
+        potencia.ReadValue<float>();
+   }
 }
