@@ -6,7 +6,7 @@ using UnityEngine;
 public class AdministradorJuego : MonoBehaviour
 {
     public static AdministradorJuego SingletonAdministradorJuego;
-    public static float VelocidadBola = 1f;
+    public static float VelocidadBola = 7f;
     public static int DisparosPorJuego = 3;
     public static float VelocidadRotacion = 1;
     public GameObject canvasGanar;

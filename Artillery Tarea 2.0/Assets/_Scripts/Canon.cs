@@ -19,6 +19,7 @@ public class Canon : MonoBehaviour
     private InputAction apuntar;
     private InputAction potencia;
     private InputAction disparar;
+    public Slider PruebaPotencia;
     
 
     private void Awake()
@@ -69,7 +70,7 @@ public class Canon : MonoBehaviour
             direccionDisparo.y = 90 - direccionDisparo.x;
             Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
             GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas));
-            tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBola;
+            tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBola * PruebaPotencia.value;
             AdministradorJuego.DisparosPorJuego--;
             SourceDisparo.Play();
             bloqueado = true;
@@ -78,6 +79,6 @@ public class Canon : MonoBehaviour
 
    private void Potencia(InputAction.CallbackContext context)
    {
-        potencia.ReadValue<float>();
+       PruebaPotencia.value =+ potencia.ReadValue<float>();
    }
 }
